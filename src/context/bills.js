@@ -24,7 +24,8 @@ const BillProvider = ({ children }) => {
   };
 
   return (
-    <BillContext.Provider value={{ bills, addBill, editBill, deleteBill }}>
+    <BillContext.Provider
+      value={{ bills, addBill, editBill, deleteBill, setBills }}>
       {children}
     </BillContext.Provider>
   );

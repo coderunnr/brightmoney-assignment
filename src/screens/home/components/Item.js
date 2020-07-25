@@ -1,10 +1,13 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
-import { LIGHT_GRAY_COLOR } from '../../../constants/color';
+import { LIGHT_GRAY_COLOR, ORANGE } from '../../../constants/color';
 
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+  },
+  highlight: {
+    backgroundColor: ORANGE,
   },
   heading: {
     fontSize: 18,
@@ -21,9 +24,18 @@ const styles = StyleSheet.create({
   },
 });
 
-const Item = ({ description, category, amount, date, onPress }) => {
+const Item = ({
+  description,
+  category,
+  amount,
+  date,
+  highlight = false,
+  onPress,
+}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.container, highlight ? styles.highlight : {}]}
+      onPress={onPress}>
       <Text style={styles.heading}>{description}</Text>
       <Text style={styles.details}>{category}</Text>
       <Text style={styles.details}>$ {amount}</Text>
