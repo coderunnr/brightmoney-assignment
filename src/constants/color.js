@@ -1,0 +1,11 @@
+export const PRIMARY_COLOR = '#fb5e50';
+export const DARK_TEXT_COLOR = '#000000';
+export const MEDIUM_TEXT_COLOR = '#404040';
+export const TRANSLUCENT_BLACK = '#00000099';
+export const LIGHT_TEXT_COLOR = '#8c8c8c';
+export const LIGHT_BG_COLOR = '#cccccc';
+export const LIGHT_GRAY_COLOR = '#dadedf';
+export const WHITE_TEXT_COLOR = '#ffffff';
+export const GREEN = '#228B22';
+export const ORANGE = '#ffa500';
+export const RED = '#e60000';
