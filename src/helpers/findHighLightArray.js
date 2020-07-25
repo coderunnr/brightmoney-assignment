@@ -8,12 +8,14 @@ export const findHighLightArray = (bills, budget) => {
   let currentSum = Number(bills[0].amount);
   let maxSum = 0;
   let start = 0;
+  let maxSumStartIndex = 0;
   let end = 0;
 
   const maxValue = (max, current, index) => {
     let maxVal = max;
-    if (max < current) {
+    if (max <= current) {
       maxVal = current;
+      maxSumStartIndex = start;
       end = index;
     }
     return maxVal;
@@ -37,11 +39,9 @@ export const findHighLightArray = (bills, budget) => {
     maxSum = maxValue(maxSum, currentSum, bills.length - 1);
   }
 
-  for (let i = start; i <= end; i++) {
+  for (let i = maxSumStartIndex; i <= end; i++) {
     bills[i].highlight = true;
   }
-
-  console.log('>>>> highlight', bills, start, end);
 
   return bills;
 };

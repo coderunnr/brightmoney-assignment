@@ -29,8 +29,6 @@ const Home = ({ navigation }) => {
   const { bills, setBills } = useContext(BillContext);
   const [budget, setBudget] = useState('50000');
 
-  console.log('>>>>1', bills);
-
   const renderBill = ({ item, index }) => {
     const onPress = () => {
       navigation.navigate('Add', { index });
