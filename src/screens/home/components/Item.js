@@ -27,9 +27,7 @@ const Item = ({ description, category, amount, date, onPress }) => {
       <Text style={styles.heading}>{description}</Text>
       <Text style={styles.details}>{category}</Text>
       <Text style={styles.details}>$ {amount}</Text>
-      <Text style={styles.details}>
-        {new Date(Number(date)).toDateString()}
-      </Text>
+      <Text style={styles.details}>{new Date(date).toDateString()}</Text>
       <View style={styles.separator} />
     </TouchableOpacity>
   );

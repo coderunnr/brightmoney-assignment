@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Home from '../screens/home';
 import Add from '../screens/bill';
+import TimeGraph from '../screens/timegraph';
 
 import { PRIMARY_COLOR, WHITE_TEXT_COLOR } from '../constants/color';
 
@@ -29,6 +30,13 @@ const RootNavigator = createStackNavigator({
     screen: Add,
     navigationOptions: () => ({
       title: 'Bill',
+      ...headerStyle,
+    }),
+  },
+  TimeGraph: {
+    screen: TimeGraph,
+    navigationOptions: () => ({
+      title: 'Time Series Graph',
       ...headerStyle,
     }),
   },

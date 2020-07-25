@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     bottom: 20,
     right: 20,
   },
+  viewTimeGraph: {
+    margin: 16,
+  },
 });
 
 const Home = ({ navigation }) => {
@@ -37,8 +40,15 @@ const Home = ({ navigation }) => {
     navigation.navigate('Add', { index: -1 });
   };
 
+  const onViewTimeGraph = () => {
+    navigation.navigate('TimeGraph');
+  };
+
   return (
     <View style={styles.container}>
+      <CButton style={styles.viewTimeGraph} onPress={onViewTimeGraph}>
+        {locale.viewTimeGraph}
+      </CButton>
       <FlatList
         data={bills}
         renderItem={renderBill}

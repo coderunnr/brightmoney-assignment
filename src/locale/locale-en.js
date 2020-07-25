@@ -6,6 +6,7 @@ const locale = {
   save: 'Save',
   changeDate: 'Change Date',
   delete: 'Delete',
+  viewTimeGraph: 'View Time Series Graph',
 };
 
 export default locale;

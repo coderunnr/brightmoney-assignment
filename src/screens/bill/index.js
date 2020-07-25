@@ -50,7 +50,7 @@ const Bill = ({ navigation }) => {
   const [description, setDescription] = useState(bill.description);
   const [amount, setAmount] = useState(bill.amount);
   const [date, setDate] = useState(
-    bill.date ? new Date(Number(bill.date)) : new Date(),
+    bill.date ? new Date(bill.date) : new Date(),
   );
   const [category, setCategory] = useState(bill.category || categories[2]);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -69,7 +69,7 @@ const Bill = ({ navigation }) => {
     const billData = {
       description,
       amount,
-      date: date.getTime().toString(),
+      date: date.getTime(),
       category,
     };
     if (isEdit) {
